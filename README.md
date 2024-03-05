@@ -22,7 +22,7 @@ However, executing `Big-SQL` directly on table may cause many troubles, such as:
 - `Big-SQL` involving large amounts of data cause extensive CPU and IO operations. 
 - Replaying `Big-SQL` also costs too long time, during replaying replicas have data latency.
 
-Risk Summary: `overhead connection limit`, `connection denied` `accumulation of slow queries` `data latency`.
+**Risk Summary**: `overhead connection limit`, `connection denied` `accumulation of slow queries` `data latency`.
 
 Otherwise,  executing `Big-SQL` directly like a black-box, we are unable to estimate how much more time is required.
 
