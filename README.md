@@ -2,6 +2,8 @@
 
 **split-exec: A sleek and efficient database Online DML change tool with zero online impact, perceptible progress, and controllable latency.**
 
+**current status: developing, Maybe product first available release at April 15**
+
 ## Why?
 
 When using a database (such as MySQL or PostgreSQL), we often need to perform DML operations that can affect a large amount of rows. This type of SQL, referred to as "Big-SQL" in the following text.
