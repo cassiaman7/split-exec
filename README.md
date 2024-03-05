@@ -4,7 +4,7 @@
 
 ## Why?
 
-When using a database (such as MySQL or PostgreSQL), we often need to perform DML operations that can affect a large amount of rows. 
+When using a database (such as MySQL or PostgreSQL), we often need to perform DML operations that can affect a large amount of rows. This type of SQL, referred to as "Big-SQL" in the following text.
 
 For example, when data expires, we may want to:
 - Mark old data as deleted. This can be done using a SQL update statement like:
@@ -12,9 +12,7 @@ For example, when data expires, we may want to:
 - Delete old data to reclaim space. This can be achieved with an SQL delete statement like:
   `delete from online_task where create_time<'2023-02-01'`
 - Migrate data from the live table to an archive table. This can be done using an SQL insert statement like:
-  `insert into archive_task select * from online_task where create_time<'2023-02-01'`
-
-This type of SQL, referred to as "Big-SQL" in the following text.
+  `insert into archive_task select * from online_task where create_time<'2023-02-01'
 
 However, executing `Big-SQL` directly on table may cause many troubles, such as:
 - Coarse-grained locks held by `Big-SQL` during executing impact live queries. 
