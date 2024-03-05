@@ -2,7 +2,7 @@
 
 **split-exec: A sleek and efficient database Online DML change tool with zero online impact, perceptible progress, and controllable latency.**
 
-**current status: developing, Maybe product first available release at April 15**
+**current status: developing, Maybe product first available release at April 15 2024**
 
 ## Why?
 
