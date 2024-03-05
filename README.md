@@ -12,7 +12,7 @@ For example, when data expires, we may want to:
 - Delete old data to reclaim space. This can be achieved with an SQL delete statement like:
   `delete from online_task where create_time<'2023-02-01'`
 - Migrate data from the live table to an archive table. This can be done using an SQL insert statement like:
-  `insert into archive_task select * from online_task where create_time<'2023-02-01'
+  `insert into archive_task select * from online_task where create_time<'2023-02-01`
 
 However, executing `Big-SQL` directly on table may cause many troubles, such as:
 - Coarse-grained locks held by `Big-SQL` during executing impact live queries. 
