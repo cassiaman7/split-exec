@@ -31,7 +31,7 @@ Otherwise,  executing `Big-SQL` directly like a black-box, we are unable to esti
 In order to solve this problem, we try to split one `Big-SQL` into pieces of sub-SQL by primary key or unique key. when executing sub-SQL, we also inspect data latency between master and replicas
 
 The sample design of flow is like:
-![design-flow-brain](./design-flow-map.png)
+![design-flow-map](./docs/images/design-flow-map.png)
 
 ***TODO: add***
 
