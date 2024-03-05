@@ -8,10 +8,13 @@ When using a database (such as MySQL or PostgreSQL), we often need to perform DM
 
 For example, when data expires, we may want to:
 - Mark old data as deleted. This can be done using a SQL update statement like:
+
   `update online_task status='deleted' where create_time<'2023-02-01'`
 - Delete old data to reclaim space. This can be achieved with an SQL delete statement like:
+
   `delete from online_task where create_time<'2023-02-01'`
 - Migrate data from the live table to an archive table. This can be done using an SQL insert statement like:
+
   `insert into archive_task select * from online_task where create_time<'2023-02-01`
 
 However, executing `Big-SQL` directly on table may cause many troubles, such as:
@@ -19,7 +22,7 @@ However, executing `Big-SQL` directly on table may cause many troubles, such as:
 - `Big-SQL` involving large amounts of data cause extensive CPU and IO operations. 
 - Replaying `Big-SQL` also costs too long time, during replaying replicas have data latency.
 
-Problems: `overhead connection limit`, `connection denied` `accumulation of slow queries` `data latency`.
+Summary: `overhead connection limit`, `connection denied` `accumulation of slow queries` `data latency`.
 
 Otherwise,  executing `Big-SQL` directly like a black-box, we are unable to estimate how much more time is required.
 
@@ -32,15 +35,6 @@ The sample design of flow is like:
 
 ***TODO: add***
 
-## Get Starting
+## Usage
 
-```
-proj_dir='~/proj'
-mkdir -p $proj_dir
-cd $proj_dir
-git clone https://github.com/cassiaman7/split-exec.git
-cd split-exec
-make all
-```
-
-after such cmds, you will find `split-exec` in output dir
+TODO
